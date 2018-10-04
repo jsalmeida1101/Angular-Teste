@@ -25,7 +25,9 @@ Instruções:
 
 1. Faça o clone do repositório e dentro da pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular) execute o comando npm install para que as dependências do Angular sejam instaladas.
 
-2. Utilize o 
+2. Utilizando o Visual Studio Code, abra a pasta (../TesteAngularWebApi/FrontEnd/Angular) para trabalhar com o Angular.
+
+3. Utilizando a IDE Visual Studio abra o arquivo (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln) para abrir o projeto e trabalhar com a API.
 
 
 Teste:
