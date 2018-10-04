@@ -3,10 +3,12 @@ Teste para vaga de emprego, utilizando Angular e ASP.NET Web API.
 
 Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções abaixo para ter o seu projeto funcionando, construa as funcionalidades requeridas no teste e quando terminar entre em contato. Ficaremos felizes em tê-lo em nossa equipe!
 
+
 Você vai precisar ter instalado:
 
 - IDE do Visual Studio e Visual Studio Code www.visualstudio.microsoft.com
 - Node www.nodejs.org
+
 
 Tecnologias e linguagens que são utilizadas nesse projeto:
 
@@ -18,11 +20,13 @@ Back-end
 Front-end
 - Angular
 
+
 Instruções:
 
 1. Faça o clone do repositório e dentro da pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular) execute o comando npm install para que as dependências do Angular sejam instaladas.
 
-2.
+2. Utilize o 
+
 
 Teste:
 
