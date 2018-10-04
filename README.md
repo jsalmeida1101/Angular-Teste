@@ -7,6 +7,7 @@ Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções aba
 ### Você vai precisar ter instalado:
 
 - IDE do Visual Studio e Visual Studio Code www.visualstudio.microsoft.com
+- .NET Developer Pack 4.7.1 https://www.microsoft.com/en-us/download/details.aspx?id=56119
 - Node www.nodejs.org
 
 
