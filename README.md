@@ -1,7 +1,8 @@
 # TesteAngularWebApi
 Teste para vaga de emprego, utilizando Angular e ASP.NET Web API.
 
-Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções abaixo para ter o seu projeto funcionando e construa as funcionalidades requeridas no teste. 
+Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções abaixo para ter o seu projeto funcionando e construa as funcionalidades requeridas no teste.
+
 Não necessarimanete todas as funcionalidades precisam ser construídas, caso você chegue no seu limite e não consiga prosseguir, traga o que conseguiu fazer para ser avaliado. Mas, caso consiga construir todas as funcionalidades requeridas, isso conta muito, pois mostra que você tem pleno domínio das tecnologias envolvidas e logicamente isso conta muita na avaliação.
 
 Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em nossa equipe!
