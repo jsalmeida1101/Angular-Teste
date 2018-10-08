@@ -17,8 +17,8 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 
 #### Back-end
 - ASP.NET Web API (linguagem c#) https://www.asp.net/web-api
-- Banco de dados SQL Server Compact https://www.technet.microsoft.com/en-us/library/ms173994(v=sql.110).aspx
-- Entity Framework https://www.docs.microsoft.com/pt-br/ef/#pivot=ef6x&panel=ef6x1
+- Banco de dados SQL Server Compact https://technet.microsoft.com/en-us/library/ms173994(v=sql.110).aspx
+- Entity Framework https://docs.microsoft.com/pt-br/ef/#pivot=ef6x&panel=ef6x1
 
 #### Front-end
 - Angular https://www.angular.io/
