@@ -26,7 +26,7 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 
 ### Instruções:
 
-1. Faça o clone do repositório, abra um terminal de comando e entre na pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular), execute comando "npm install" (sem as aspas) para que as dependências do Angular sejam instaladas.
+1. Faça o clone do repositório, abra um terminal de comando e entre na pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular), execute comando "npm install" (sem as aspas) para que as dependências sejam instaladas.
 
 2. Utilizando o Visual Studio Code, abra a pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular). É com o Visual Studio Code que você construirá o Front-end da aplicação.
 
