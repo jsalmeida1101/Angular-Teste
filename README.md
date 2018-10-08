@@ -16,12 +16,13 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 ### Tecnologias e linguagens que são utilizadas nesse projeto:
 
 #### Back-end
-- ASP.NET Web API (linguagem c#)
-- Banco de dados SQL Server Compact
-- Entity Framework
+- ASP.NET Web API (linguagem c#) https://www.asp.net/web-api
+- Banco de dados SQL Server Compact https://www.technet.microsoft.com/en-us/library/ms173994(v=sql.110).aspx
+- Entity Framework https://www.docs.microsoft.com/pt-br/ef/#pivot=ef6x&panel=ef6x1
 
 #### Front-end
-- Angular
+- Angular https://www.angular.io/
+- Angular Material https://www.material.angular.io/
 
 
 ### Instruções:
@@ -30,11 +31,11 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 
 2. Utilizando o Visual Studio Code, abra a pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular). É com o Visual Studio Code que você construirá o Front-end da aplicação.
 
-3. Utilizando a IDE Visual Studio abra o arquivo (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln). Isso vai abrir o projeto ASP.NET Web API. É com essa IDE que você construirá o seu Back-end.
+3. Utilizando a IDE Visual Studio, vá em File > Open > Project/Solution e selecione o arquivo conhecido como a solution do projeto (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln). Isso vai abrir o projeto ASP.NET Web API. É com essa IDE que você construirá o seu Back-end.
 
-4. Já existe um exemplo funcionando nesses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
+4. Já existe um exemplo em pleno funcionamento dentro desses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
 
-5. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial :D
+5. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial. Caso, tenha alguma dificuldade fique a vontade para nos contatar, mas lembre-se, a internet é um mar de conhecimento :D
 
 
 ### Teste:
