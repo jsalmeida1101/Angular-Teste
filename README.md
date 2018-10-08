@@ -1,7 +1,9 @@
 # TesteAngularWebApi
 Teste para vaga de emprego, utilizando Angular e ASP.NET Web API.
 
-Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções abaixo para ter o seu projeto funcionando, construa as funcionalidades requeridas no teste e quando terminar entre em contato. Ficaremos felizes em tê-lo em nossa equipe!
+Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções abaixo para ter o seu projeto funcionando, construa as funcionalidades requeridas no teste, não necessarimanete precisam ser todas as funcionalidades, se você chegar no seu limite e não conseguir prosseguir, traga o que conseguiu fazer para ser avaliado. Caso consiga construir todas as funcionalidades requeridas, isso conta muito, pois mostra que você tem pleno domínio das tecnologias envolvidas e logicamente isso conta muita na avaliação.
+
+Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em nossa equipe!
 
 
 ### Você vai precisar ter instalado:
@@ -24,17 +26,32 @@ Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções aba
 
 ### Instruções:
 
-1. Faça o clone do repositório e dentro da pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular) execute o comando npm install para que as dependências do Angular sejam instaladas.
+1. Faça o clone do repositório, abra um terminal de comando e entre na pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular), execute comando "npm install" (sem as aspas) para que as dependências do Angular sejam instaladas.
 
-2. Utilizando o Visual Studio Code, abra a pasta (../TesteAngularWebApi/FrontEnd/Angular) para trabalhar com o Angular.
+2. Utilizando o Visual Studio Code, abra a pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular). É com o Visual Studio Code que você construirá o Front-end da aplicação.
 
-3. Utilizando a IDE Visual Studio abra o arquivo (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln) para abrir o projeto e trabalhar com a API.
+3. Utilizando a IDE Visual Studio abra o arquivo (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln). Isso vai abrir o projeto ASP.NET Web API. É com essa IDE que você construirá o seu Back-end.
+
+4. Já existe um exemplo funcionando nesses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
+
+5. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial :D
 
 
 ### Teste:
 
-1. Na API, crie uma classe chamada 'Pessoa' com os campos que julgar necessário no cadastro de uma pessoa.
-2. Na API, crie o CRUD para classe 'Pessoa'. Lembrando que as operações devem persistir no banco de dados.
-3. No Angular, crie um componente onde os dados de uma nova pessoa possam ser digitados, validados e então persistidos. Lembrando que a persistência da pessoa no banco é feita através da API.
-4. No Angular, crie um componente onde as pessoas cadastradas serão listadas. Esse componente deve conter as opções para deletar e editar cada uma das pessoas listadas.
-5. Entre em contato conosco \o/
+#### Cenário
+Um cliente chega à loja para fazer uma compra. Nessa compra um ou vários produtos estão envolvidos. Você como atendente deve cadastrar esse cliente e registrar a venda dos produtos escolhidos, comunicando o cliente o valor total da compra.
+
+#### Entidades envolvidas (modelos)
+Analisando o cenário à cima, facilmente identifican-se as entidades com as quais se deve trabalhar, são elas:
+- Cliente
+- Produto
+- Pedido
+
+Os nomes não precisam ser esses, isso é só para que você entenda o que estamos querendo que seja construído. Pode utilizar os nomes de sua preferência.
+
+#### Funcionalidades esperadas
+- Cadastro de clientes, com os campos que julgar ser necessário e validação dos que forem obrigatórios.
+- Cadastro de produtos, com os campos que julgar ser necessário e validação dos que forem obrigatórios. Seria legal ter a foto do produto cadastrada, mas isso é um bonus.
+- Cadastro do pedidos (ou venda, ou compra, como queira), sendo obrigatório informar qual é o cliente, quais são os produtos e o valor total.
+
