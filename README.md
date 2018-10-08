@@ -54,8 +54,9 @@ Analisando o cenário à cima, facilmente identifican-se as entidades com as qua
 Os nomes não precisam ser esses, isso é só para que você entenda o que estamos querendo que seja construído. Pode utilizar os nomes de sua preferência.
 
 #### Funcionalidades esperadas
-- Cadastro de clientes, com os campos: Nome (Obrigatório), E-mail (Obrigatório e único, pois não pode existir mais de um cadastro com o mesmo e-mail).
+- Cadastro de clientes, com os campos: Nome (obrigatório) e E-mail (obrigatório e único, pois não pode existir mais de um cadastro com o mesmo e-mail).
 
-- Cadastro de produtos, com os campos: Descrição, Valor e Foto. Sendo que os campos Descrição e Valor são requeridos e o Valor não deve ser menor ou igual à zero.
-- Cadastro do pedidos, com os campos: Número, sendo obrigatório informar qual é o cliente, quais são os produtos e o valor total.
+- Cadastro de produtos, com os campos: Descrição (obrigatório), Valor (obrigatório e maior que zero, pois não faz sentido existir um produto com valor zero ou negativo) e Foto.
+
+- Cadastro do pedidos, com os campos: Número (obrigatório e sequêncial), Data (obrigatório), Produtos (obrigatório), Cliente (obrigatório), Valor (obrigatório), Desconto e ValorTotal (obrigatório).
 
