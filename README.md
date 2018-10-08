@@ -15,6 +15,7 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 - Visual Studio Code www.visualstudio.microsoft.com
 - .NET Developer Pack 4.7.1 https://www.microsoft.com/en-us/download/details.aspx?id=56119
 - Node www.nodejs.org
+- Angular CLI https://cli.angular.io/
 
 
 ## Tecnologias e linguagens que são utilizadas nesse projeto
