@@ -38,7 +38,11 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 
 3. Utilizando a IDE Visual Studio, vá em File > Open > Project/Solution e selecione o arquivo conhecido como a solution do projeto (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln). Isso vai abrir o projeto ASP.NET Web API. É com essa IDE que você construirá o seu Back-end.
 
-4. Já existe um exemplo em pleno funcionamento dentro desses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
+4. Utilizando a IDE Visual Studio, inicie o serviço Web API apertando F5. Isso vai iniciar todo o serviço e abrir uma página web que exibe uma mensagem de erro padrão, não se preocupe. Acesse o endereço http://localhost:49493/api/contatos/ e se tudo estiver correto você deve receber uma resposta no formato JSON. Lembre-se de ter esse serviço rodando quando quiser o Front-end.
+
+5. Utilizando um Prompt de comando, entre na pasta do projeto Angular (../TesteAngularWebApi/FrontEnd/Angular) e execute o comando "ng serve" (sem aspas). Isso vai iniciar o serviço do node, que contém a página do Front-end em Angular. Quando o serviço estiver inicializado acesse o endereço http://localhost:4200/, se tudo estiver correto você vai ver a página web que já está construída como exemplo.
+
+6. Já existe um exemplo em pleno funcionamento dentro desses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
 
 5. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial. Caso, tenha alguma dificuldade fique a vontade para nos contatar, mas lembre-se, a internet é um mar de conhecimento. :surfer:
 
