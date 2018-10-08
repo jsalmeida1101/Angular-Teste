@@ -5,7 +5,7 @@ Gostaria de trabalhar conosco? Clone esse repositório, siga as instruções aba
 
 Não necessarimanete todas as funcionalidades precisam ser construídas, caso você chegue no seu limite e não consiga prosseguir, traga o que conseguiu fazer para ser avaliado. Mas caso consiga construir todas as funcionalidades requeridas, meus parabéns, isso mostra que você tem pleno domínio das tecnologias envolvidas e logicamente isso conta muito na avaliação.
 
-Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em nossa equipe!
+Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em nossa equipe! :smile:
 
 
 ## Você vai precisar ter instalado
@@ -37,7 +37,7 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 
 4. Já existe um exemplo em pleno funcionamento dentro desses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
 
-5. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial. Caso, tenha alguma dificuldade fique a vontade para nos contatar, mas lembre-se, a internet é um mar de conhecimento :D
+5. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial. Caso, tenha alguma dificuldade fique a vontade para nos contatar, mas lembre-se, a internet é um mar de conhecimento. :surfer:
 
 
 ## Teste
@@ -72,4 +72,5 @@ Analisando o cenário à cima, facilmente identifican-se as entidades com as qua
     - Valor (obrigatório)
     - Desconto
     - ValorTotal (obrigatório).
-
+    
+:sunglasses:
