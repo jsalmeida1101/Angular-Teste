@@ -10,7 +10,8 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 
 ## Você vai precisar ter instalado
 
-- IDE do Visual Studio e Visual Studio Code www.visualstudio.microsoft.com
+- IDE do Visual Studio Community 2017 www.visualstudio.microsoft.com
+- Visual Studio Code www.visualstudio.microsoft.com
 - .NET Developer Pack 4.7.1 https://www.microsoft.com/en-us/download/details.aspx?id=56119
 - Node www.nodejs.org
 
