@@ -55,7 +55,7 @@ Os nomes não precisam ser esses, isso é só para que você entenda o que estam
 
 #### Funcionalidades esperadas
 - Cadastro de clientes, com os campos: Nome (obrigatório) e E-mail (obrigatório e único, pois não pode existir mais de um cadastro com o mesmo e-mail).
-  -asd
+  *asd
 
 - Cadastro de produtos, com os campos: Descrição (obrigatório), Valor (obrigatório e maior que zero, pois não faz sentido existir um produto com valor zero ou negativo) e Foto.
 
