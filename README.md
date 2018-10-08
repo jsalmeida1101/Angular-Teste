@@ -8,14 +8,14 @@ Não necessarimanete todas as funcionalidades precisam ser construídas, caso vo
 Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em nossa equipe!
 
 
-### Você vai precisar ter instalado:
+## Você vai precisar ter instalado
 
 - IDE do Visual Studio e Visual Studio Code www.visualstudio.microsoft.com
 - .NET Developer Pack 4.7.1 https://www.microsoft.com/en-us/download/details.aspx?id=56119
 - Node www.nodejs.org
 
 
-### Tecnologias e linguagens que são utilizadas nesse projeto:
+### Tecnologias e linguagens que são utilizadas nesse projeto
 
 #### Back-end
 - ASP.NET Web API (linguagem c#) https://www.asp.net/web-api
@@ -27,7 +27,7 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 - Angular Material https://www.material.angular.io/
 
 
-### Instruções:
+### Instruções
 
 1. Faça o clone do repositório, abra um terminal de comando e entre na pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular), execute comando "npm install" (sem as aspas) para que as dependências sejam instaladas.
 
@@ -40,7 +40,7 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 5. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial. Caso, tenha alguma dificuldade fique a vontade para nos contatar, mas lembre-se, a internet é um mar de conhecimento :D
 
 
-### Teste:
+### Teste
 
 #### Cenário
 Um cliente chega à loja para fazer uma compra. Nessa compra um ou vários produtos estão envolvidos. Você como atendente deve cadastrar esse cliente e registrar a venda dos produtos escolhidos, comunicando o cliente o valor total da compra.
