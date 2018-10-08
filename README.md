@@ -51,8 +51,6 @@ Analisando o cenário à cima, facilmente identifican-se as entidades com as qua
 - Produto
 - Pedido
 
-Os nomes não precisam ser esses, isso é só para que você entenda o que estamos querendo que seja construído. Pode utilizar os nomes de sua preferência.
-
 #### Funcionalidades esperadas
 - Cadastro de clientes, com os campos:
   
