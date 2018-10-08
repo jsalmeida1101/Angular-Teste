@@ -59,7 +59,19 @@ Os nomes não precisam ser esses, isso é só para que você entenda o que estam
     - Nome (obrigatório)
     - E-mail (obrigatório e único, pois não pode existir mais de um cadastro com o mesmo e-mail)
 
-- Cadastro de produtos, com os campos: Descrição (obrigatório), Valor (obrigatório e maior que zero, pois não faz sentido existir um produto com valor zero ou negativo) e Foto.
+- Cadastro de produtos, com os campos: 
 
-- Cadastro do pedidos, com os campos: Número (obrigatório e sequêncial), Data (obrigatório), Produtos (obrigatório), Cliente (obrigatório), Valor (obrigatório), Desconto e ValorTotal (obrigatório).
+    - Descrição (obrigatório)
+    - Valor (obrigatório e maior que zero, pois não faz sentido existir um produto com valor zero ou negativo)
+    - Foto
+
+- Cadastro do pedidos, com os campos: 
+
+    - Número (obrigatório e sequêncial)
+    - Data (obrigatório)
+    - Produtos (obrigatório)
+    - Cliente (obrigatório)
+    - Valor (obrigatório)
+    - Desconto
+    - ValorTotal (obrigatório).
 
