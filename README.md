@@ -45,10 +45,10 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 6. Já existe um exemplo em pleno funcionamento dentro desses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
 
 7. Caso você receba a seguinte mensagem de erro na IDE do Visual Studio: "The model backing the 'Contexto' context has changed since the database was created. Consider using Code First Migrations to update the database"; Você provavelmente deve ter alterado ou criado um ou mais modelos. Deste modo você deve utilizar o Entity Framework para fazer a migração do banco de dados:
-        7.1 Abra o Package Manager Console na IDE do Visual Studio. (Exibir > Outras janelas > Console do gerenciador de pacotes)
-        7.2 Execute o comando "update-database -verbose" (sem aspas) nesse terminal.
-        7.3 Caso você ainda tenha mensagens de erro, delete o arquivo do banco de dados (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi/App_Data/Dados.sdf) e execute o comando novamente.
-        7.4 Se mesmo deletando o arquivo do banco de dados você continuar obtendo erros, é a sua alteração causou alguma mudança que o Entity Framework não consegue mapear. Investigue o seu código ou clone novamente o repositório para tentar novamente.
+        7.1. Abra o Package Manager Console na IDE do Visual Studio. (Exibir > Outras janelas > Console do gerenciador de pacotes)
+        7.2. Execute o comando "update-database -verbose" (sem aspas) nesse terminal.
+        7.3. Caso você ainda tenha mensagens de erro, delete o arquivo do banco de dados (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi/App_Data/Dados.sdf) e execute o comando novamente.
+        7.4. Se mesmo deletando o arquivo do banco de dados você continuar obtendo erros, é a sua alteração causou alguma mudança que o Entity Framework não consegue mapear. Investigue o seu código ou clone novamente o repositório para tentar novamente.
 
 8. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial. Caso, tenha alguma dificuldade fique a vontade para nos contatar, mas lembre-se, a internet é um mar de conhecimento. :surfer:
 
