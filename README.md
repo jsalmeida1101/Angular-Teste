@@ -52,7 +52,7 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
         
     7.3. Caso você ainda tenha mensagens de erro, delete o arquivo do banco de dados (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi/App_Data/Dados.sdf) e execute o comando novamente.
         
-    7.4. Se mesmo deletando o arquivo do banco de dados você continuar obtendo erros, é a sua alteração causou alguma mudança que o Entity Framework não consegue mapear. Investigue o seu código ou clone novamente o repositório para tentar novamente.
+    7.4. Se mesmo deletando o arquivo do banco de dados você continuar obtendo erros, é a sua alteração causou alguma mudança que o Entity Framework não consegue mapear. Investigue o erro e o seu código ou clone novamente o repositório para tentar novamente.
 
 8. Boa sorte! Estamos na torcida para que você conclua o teste e mostre todo seu potencial. Caso, tenha alguma dificuldade fique a vontade para nos contatar, mas lembre-se, a internet é um mar de conhecimento. :surfer:
 
