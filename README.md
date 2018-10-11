@@ -17,6 +17,7 @@ Faça o teste e mostre até onde consegue chegar. Ficaremos felizes em tê-lo em
 - Node www.nodejs.org
 - Angular CLI https://cli.angular.io/
 
+ps: tudo em ambiente Windows.
 
 ## Tecnologias e linguagens que são utilizadas nesse projeto
 
