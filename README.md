@@ -33,25 +33,25 @@ ps: tudo em ambiente Windows.
 
 ## Como começar
 
-1. Faça o clone do repositório, abra um Prompt de comando e entre na pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular), execute comando "npm install" (sem as aspas) para que as dependências sejam instaladas.
+1. Faça o clone do repositório, abra um Prompt de comando e entre na pasta do projeto do Angular (`../TesteAngularWebApi/FrontEnd/Angular`), execute comando `npm install` para que as dependências sejam instaladas.
 
-2. Utilizando o Visual Studio Code, abra a pasta do projeto do Angular (../TesteAngularWebApi/FrontEnd/Angular). É com o Visual Studio Code que você construirá o Front-end da aplicação.
+2. Utilizando o Visual Studio Code, abra a pasta do projeto do Angular (`../TesteAngularWebApi/FrontEnd/Angular`). É com o Visual Studio Code que você construirá o Front-end da aplicação.
 
-3. Utilizando a IDE Visual Studio, vá em File > Open > Project/Solution e selecione o arquivo conhecido como a solution do projeto (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln). Isso vai abrir o projeto ASP.NET Web API. É com essa IDE que você construirá o seu Back-end.
+3. Utilizando a IDE Visual Studio, vá em File > Open > Project/Solution e selecione o arquivo conhecido como a solution do projeto (`../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi.sln`). Isso vai abrir o projeto ASP.NET Web API. É com essa IDE que você construirá o seu Back-end.
 
-4. Utilizando a IDE Visual Studio, inicie o serviço Web API apertando F5. Isso vai iniciar todo o serviço e abrir uma página web que exibe uma mensagem de erro padrão, não se preocupe. Acesse o endereço http://localhost:49493/api/contatos/ e se tudo estiver correto você deve receber uma resposta no formato JSON. Lembre-se de ter esse serviço rodando quando quiser testar o Front-end.
+4. Utilizando a IDE Visual Studio, inicie o serviço Web API apertando F5. Isso vai iniciar todo o serviço e abrir uma página web que exibe uma mensagem de erro padrão, não se preocupe. Acesse o endereço `http://localhost:49493/api/contatos/` e se tudo estiver correto você deve receber uma resposta no formato JSON. Lembre-se de ter esse serviço rodando quando quiser testar o Front-end.
 
-5. Utilizando um Prompt de comando, entre na pasta do projeto Angular (../TesteAngularWebApi/FrontEnd/Angular) e execute o comando "ng serve" (sem aspas). Isso vai iniciar o serviço do node, que contém a página do Front-end em Angular. Quando o serviço estiver inicializado acesse o endereço http://localhost:4200/, se tudo estiver correto você vai ver a página web que já está construída como exemplo.
+5. Utilizando um Prompt de comando, entre na pasta do projeto Angular (`../TesteAngularWebApi/FrontEnd/Angular`) e execute o comando `ng serve`. Isso vai iniciar o serviço do node, que contém a página do Front-end em Angular. Quando o serviço estiver inicializado acesse o endereço `http://localhost:4200/`, se tudo estiver correto você vai ver a página web que já está construída como exemplo.
 
 6. Já existe um exemplo em pleno funcionamento dentro desses projetos, é algo bem simples, onde você pode cadastrar um Contato e cada Contato pode ter várias Mensagens cadastradas. Apesar de simples, o exemplo é suficiente para demonstrar como as coisas funcionam, então talvez você deva investigar os códigos existentes antes de tentar construir alguma coisa.
 
-7. Caso você receba a seguinte mensagem de erro na IDE do Visual Studio: "The model backing the 'Contexto' context has changed since the database was created. Consider using Code First Migrations to update the database"; Você provavelmente deve ter alterado ou criado um ou mais modelos. Deste modo você deve utilizar o Entity Framework para fazer a migração do banco de dados:
+7. Caso você receba a seguinte mensagem de erro na IDE do Visual Studio: _"The model backing the 'Contexto' context has changed since the database was created. Consider using Code First Migrations to update the database"_; Você provavelmente deve ter alterado ou criado um ou mais modelos. Deste modo você deve utilizar o Entity Framework para fazer a migração do banco de dados:
 
     7.1. Abra o Package Manager Console na IDE do Visual Studio. (Exibir > Outras janelas > Console do gerenciador de pacotes)
         
-    7.2. Execute o comando "update-database -verbose" (sem aspas) nesse terminal.
+    7.2. Execute o comando `update-database -verbose` nesse terminal.
         
-    7.3. Caso você ainda tenha mensagens de erro, delete o arquivo do banco de dados (../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi/App_Data/Dados.sdf) e execute o comando novamente.
+    7.3. Caso você ainda tenha mensagens de erro, delete o arquivo do banco de dados (`../TesteAngularWebApi/BackEnd/AspNetWebApi/AspNetWebApi/App_Data/Dados.sdf`) e execute o comando novamente.
         
     7.4. Se mesmo deletando o arquivo do banco de dados você continuar obtendo erros, é a sua alteração causou alguma mudança que o Entity Framework não consegue mapear. Investigue o erro e o seu código ou clone novamente o repositório para tentar novamente.
 
