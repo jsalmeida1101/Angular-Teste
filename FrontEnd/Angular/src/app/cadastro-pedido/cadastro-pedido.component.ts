@@ -36,15 +36,16 @@ export class CadastroPedidoComponent implements OnInit {
 	clientes: Array<Cliente>;
 	produtos: Array<Produto>;
 	produtosCarrinho: Array<Produto> = [];
+	clienteId: any = null;
 
 	constructor(
 		private formBuilder: FormBuilder, private api: ApiService, private router: Router, private snackBar: MatSnackBar
 	) {
 		this.form = this.formBuilder.group({
-			clienteId: [null, [Validators.required]],
-			desconto: [0, [ Validators.required, Validators.pattern(/^\s*(?=.*[0-9])\d*(?:\.\d{1,2})?\s*$/)]],
+			clienteId: [null],
+			desconto: [0, [ Validators.pattern(/^\s*(?=.*[0-9])\d*(?:\.\d{1,2})?\s*$/)]],
 			produto: [null],
-			produtos: [[], [ Validators.required, Validators.minLength(1)]],
+			produtos: [[], [ Validators.required]],
 			produtosId: [[]],
 			valorTotal: [0],
 		});
@@ -54,7 +55,7 @@ export class CadastroPedidoComponent implements OnInit {
 		this.api.get('clientes/')
 			.then(data => this.clientes = data);
 
-		this.api.get('home/')
+		this.api.get('produtos/')
 			.then(data => this.produtos = data);
 	}
 
@@ -62,10 +63,16 @@ export class CadastroPedidoComponent implements OnInit {
 		if (this.form.controls.produtos.hasError('required')) {
 			this.showMessage('Adicione ao menos um produto');
 		}
+		// tive que colocar isso pois a validação na tag não estava funcionando :/
+		if (! this.clienteId) {
+			this.showMessage('Informe o cliente');
+			return;
+		}
+
 		if (this.form.invalid) { return; }
 
 		let novoPedido = this.form.value as NovoPedido;
-
+		novoPedido.ClienteId = this.clienteId;
 		this.api.post('pedidos/', novoPedido)
 			.then(() => this.goBack());
 
@@ -77,6 +84,10 @@ export class CadastroPedidoComponent implements OnInit {
 
 	changeProduto(value) {
 		this.produto = value;
+	}
+
+	changeCliente(value) {
+		this.clienteId = value ? value : null;
 	}
 
 	addProduto() {
@@ -101,7 +112,7 @@ export class CadastroPedidoComponent implements OnInit {
 
 	changeDesconto() {
 		if (this.getValorCarrinho() <= this.getDesconto()) {
-			this.showMessage('O desconto deve ser menor que o valor dos home');
+			this.showMessage('O desconto deve ser menor que o valor dos produtos');
 			this.form.controls.desconto.setValue(0);
 			return;
 		}

@@ -24,12 +24,12 @@ export class ProdutosComponent implements OnInit {
 	constructor(private api: ApiService, private router: Router) { }
 
 	ngOnInit() {
-		this.api.get<Produto[]>('home/')
+		this.api.get<Produto[]>('produtos/')
 			.then(x => this.produtos = x);
 	}
 
 	novo() {
-		this.router.navigate(['home/cadastro']);
+		this.router.navigate(['produtos/cadastro']);
 	}
 
 	formatarDinheiro(value) {

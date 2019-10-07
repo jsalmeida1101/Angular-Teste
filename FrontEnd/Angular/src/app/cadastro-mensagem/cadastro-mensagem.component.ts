@@ -39,10 +39,13 @@ export class CadastroMensagemComponent implements OnInit {
 		novaMensagem.IdContato = idContato;
 
 		this.api.post('mensagens/', novaMensagem)
-			.then(() => {
-				this.router.navigate(['contatos/' + idContato + '/mensagens']);
-			});
+			.then(() => this.goBack());
 
+	}
+
+	goBack() {
+		let idContato = this.activatedRoute.snapshot.params['id'];
+		this.router.navigate(['contatos/' + idContato + '/mensagens']);
 	}
 
 }

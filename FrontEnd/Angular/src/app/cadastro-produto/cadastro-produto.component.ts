@@ -35,7 +35,7 @@ export class CadastroProdutoComponent implements OnInit {
 
 		let novoProduto = this.form.value as NovoProduto;
 
-		this.api.post('home/', novoProduto)
+		this.api.post('produtos/', novoProduto)
 			.then(() => this.goBack());
 	}
 
