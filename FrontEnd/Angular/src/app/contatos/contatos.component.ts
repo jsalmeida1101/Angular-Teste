@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import {ApiService} from '../api.service';
 
 class Contato {
 	public Id: number;
@@ -16,19 +16,13 @@ export class ContatosComponent implements OnInit {
 
 	contatos: Contato[] = [];
 
-	httpOptions = {
-		headers: new HttpHeaders({
-			'Content-Type': 'application/json'
-		})
-	};
+	columns: Array<string> = ['Id', 'Nome', 'Actions'];
 
-	constructor(private http: HttpClient, private router: Router) { }
+	constructor(private api: ApiService, private router: Router) { }
 
 	ngOnInit() {
-		this.http.get<Contato[]>('http://localhost:49493/api/contatos/')
-			.subscribe(x => {
-				this.contatos = x;
-			});
+		this.api.get<Contato[]>('contatos/')
+			.then(x => this.contatos = x);
 	}
 
 	novo() {
@@ -36,7 +30,7 @@ export class ContatosComponent implements OnInit {
 	}
 
 	mensagens(contato: Contato) {
-		this.router.navigate(['contatos/' + contato.Id + '/mensagens']);
+		this.router.navigate([`contatos/${contato.Id}/mensagens`]);
 	}
 
 }

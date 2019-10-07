@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import {ApiService} from '../api.service';
 
 class NovoContato {
 	public Nome: string;
@@ -16,19 +17,17 @@ export class CadastroContatoComponent implements OnInit {
 
 	form: FormGroup;
 
-	httpOptions = {
-		headers: new HttpHeaders({
-			'Content-Type': 'application/json'
-		})
-	};
-
-	constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {
+	constructor(private formBuilder: FormBuilder, private api: ApiService, private router: Router) {
 		this.form = this.formBuilder.group({
 			nome: ['', Validators.required]
 		});
 	}
 
 	ngOnInit() {
+	}
+
+	goBack() {
+		this.router.navigate(['contatos']);
 	}
 
 	onSubmit() {
@@ -39,11 +38,9 @@ export class CadastroContatoComponent implements OnInit {
 
 		let novoContato = this.form.value as NovoContato;
 
-		this.http.post('http://localhost:49493/api/contatos/', JSON.stringify(novoContato), this.httpOptions)
-			.subscribe(data => {
+		this.api.post('contatos/', novoContato)
+			.then(() => {
 				this.router.navigate(['contatos']);
-			}, error => {
-				console.log('Error', error);
 			});
 
 	}

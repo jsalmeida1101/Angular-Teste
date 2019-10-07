@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import {ApiService} from '../api.service';
 
 class Mensagem {
 	public Descricao: string;
@@ -24,17 +24,17 @@ export class MensagensComponent implements OnInit {
 
 	idContato: number;
 
-	constructor(private http: HttpClient, private router: Router, private activatedRoute: ActivatedRoute) {
+	constructor(private api: ApiService, private router: Router, private activatedRoute: ActivatedRoute) {
 		this.idContato = this.activatedRoute.snapshot.params['id'];
 	}
 
 	ngOnInit() {
 
-		this.http.get<Contato>('http://localhost:49493/api/contatos/' + this.idContato)
-			.subscribe(x => this.contato = x);
+		this.api.get<Contato>('contatos/' + this.idContato)
+			.then(x => this.contato = x);
 
-		this.http.get<Mensagem[]>('http://localhost:49493/api/contatos/' + this.idContato + '/mensagens')
-			.subscribe(x => this.mensagens = x);
+		this.api.get<Mensagem[]>('contatos/' + this.idContato + '/mensagens')
+			.then(x => this.mensagens = x);
 	}
 
 	novaMensagem() {

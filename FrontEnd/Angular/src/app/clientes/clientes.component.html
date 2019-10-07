@@ -1,0 +1,29 @@
+<app-navbar title="Clientes"></app-navbar>
+
+<div style="margin:32px;">
+
+    <button mat-raised-button color="primary" (click)="novo()">Novo Cliente</button>
+
+    <mat-nav-list>
+        <mat-table [dataSource]="clientes">
+            <ng-container matColumnDef="Id">
+                <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+                <mat-cell *matCellDef="let cliente"> {{cliente.Id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Nome">
+                <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+                <mat-cell *matCellDef="let cliente"> {{cliente.Nome}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Email">
+                <mat-header-cell *matHeaderCellDef> E-mail </mat-header-cell>
+                <mat-cell *matCellDef="let cliente"> {{cliente.Email}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+            <mat-row *matRowDef="let cliente; columns: columns;"></mat-row>
+        </mat-table>
+    </mat-nav-list>
+
+</div>

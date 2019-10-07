@@ -11,7 +11,10 @@ namespace AspNetWebApi.Context
     public class Contexto : DbContext
     {
         public DbSet<Contato> Contatos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Mensagem> Mensagens { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
 
         public Contexto() : base("ConnectionString")
         {
@@ -20,7 +23,7 @@ namespace AspNetWebApi.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Properties<decimal>().Configure(config => config.HasPrecision(18, 3));
         }
-
     }
 }

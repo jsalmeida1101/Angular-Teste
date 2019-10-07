@@ -1,0 +1,38 @@
+<app-navbar title="Novo Produto"></app-navbar>
+
+<mat-card style="margin:32px;">
+
+	<form [formGroup]="form" (ngSubmit)="onSubmit()">
+		<mat-form-field class="full-width">
+			<input matInput placeholder="Descrição" formControlName="descricao">
+			<mat-error *ngIf="form.controls.descricao.hasError('required')">
+				A descrição é <strong>requerida</strong>
+			</mat-error>
+		</mat-form-field>
+		<mat-form-field class="full-width">
+            <input
+                    formControlName="valor"
+                    matInput
+                    name="valor" placeholder="Valor"
+            />
+			<mat-error *ngIf="form.controls.valor.hasError('pattern')">
+				O valor informado é <strong>inválido</strong>
+			</mat-error>
+		</mat-form-field>
+        <input matInput name="foto" formControlName="foto" hidden />
+        <input (change)="onChange($event)" hidden id="foto" accept="image/*" type="file" />
+        <label for="foto" class="mat-button mat-raised-button mat-primary">Selecionar Foto</label>
+        <div>
+            <img width="150" height="150" *ngIf="form.controls.foto.value !== null" src="{{form.controls.foto.value}}">
+        </div>
+		<br />
+		<br />
+		<mat-divider [inset]="true"></mat-divider>
+		<br />
+
+		<button mat-raised-button color="primary">Salvar</button>
+		&nbsp;
+		<button (click)="goBack()" type="button" mat-raised-button>Voltar</button>
+	</form>
+
+</mat-card>

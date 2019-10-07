@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import {ApiService} from '../api.service';
 
 class NovaMensagem {
 	public IdContato: number;
@@ -17,13 +18,7 @@ export class CadastroMensagemComponent implements OnInit {
 
 	form: FormGroup;
 
-	httpOptions = {
-		headers: new HttpHeaders({
-			'Content-Type': 'application/json'
-		})
-	};
-
-	constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private activatedRoute: ActivatedRoute) {
+	constructor(private formBuilder: FormBuilder, private api: ApiService, private router: Router, private activatedRoute: ActivatedRoute) {
 		this.form = this.formBuilder.group({
 			descricao: ['', Validators.required]
 		});
@@ -43,11 +38,9 @@ export class CadastroMensagemComponent implements OnInit {
 		let novaMensagem = this.form.value as NovaMensagem;
 		novaMensagem.IdContato = idContato;
 
-		this.http.post('http://localhost:49493/api/mensagens/', JSON.stringify(novaMensagem), this.httpOptions)
-			.subscribe(data => {
+		this.api.post('mensagens/', novaMensagem)
+			.then(() => {
 				this.router.navigate(['contatos/' + idContato + '/mensagens']);
-			}, error => {
-				console.log('Error', error);
 			});
 
 	}

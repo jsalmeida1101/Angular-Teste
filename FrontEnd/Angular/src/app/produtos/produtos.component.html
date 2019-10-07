@@ -1,0 +1,38 @@
+<app-navbar title="Produtos"></app-navbar>
+
+<div style="margin:32px;">
+
+    <button mat-raised-button color="primary" (click)="novo()">Novo Produto</button>
+
+    <br />
+
+    <mat-nav-list>
+        <mat-table [dataSource]="produtos">
+            <ng-container matColumnDef="Id">
+                <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+                <mat-cell *matCellDef="let produto"> {{produto.Id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Descricao">
+                <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
+                <mat-cell *matCellDef="let produto"> {{produto.Descricao}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Valor">
+                <mat-header-cell *matHeaderCellDef> Valor </mat-header-cell>
+                <mat-cell *matCellDef="let produto"> {{formatarDinheiro(produto.Valor)}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Foto">
+                <mat-header-cell *matHeaderCellDef> Foto </mat-header-cell>
+                <mat-cell *matCellDef="let produto">
+                    <img height="40" width="40" src="{{produto.Foto}}" *ngIf="produto.Foto !== null && produto.Foto !== ''">
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+            <mat-row *matRowDef="let produto; columns: columns;"></mat-row>
+        </mat-table>
+    </mat-nav-list>
+
+</div>

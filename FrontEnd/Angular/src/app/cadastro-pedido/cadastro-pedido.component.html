@@ -1,0 +1,65 @@
+<app-navbar title="Novo Pedido"></app-navbar>
+
+<mat-card style="margin:32px;">
+
+	<form [formGroup]="form" (ngSubmit)="onSubmit()">
+		<mat-form-field class="full-width">
+            <mat-select
+                    placeholder="Cliente"
+                    formControlName="clienteId" name="clienteId">
+                <mat-option>Selecione</mat-option>
+                <mat-option *ngFor="let cliente of clientes" [value]="cliente.Id">
+                    {{cliente.Nome}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="form.controls.clienteId.hasError('required')">
+                O cliente é <strong>requerido</strong>
+            </mat-error>
+		</mat-form-field>
+		<mat-form-field class="full-width">
+            <mat-select
+                    (selectionChange)="changeProduto($event.value)"
+                    placeholder="Produto"
+                    formGroupName="produto"
+                    name="produto">
+                <mat-option>Selecione</mat-option>
+                <mat-option
+                        *ngFor="let produto of produtos" [value]="produto">
+                    {{produto.Descricao}}
+                </mat-option>
+            </mat-select>
+		</mat-form-field>
+        <button type="button" mat-raised-button color="primary" (click)="addProduto()">Adicionar Produto</button>
+        <br />
+        <br />
+        <mat-divider [inset]="true"></mat-divider>
+        <br />
+        <strong>Lista de Produtos</strong>
+        <br />
+        <br />
+        <mat-nav-list>
+            <mat-list-item *ngFor="let produto of produtosCarrinho">
+                {{ produto.Descricao }} - {{ formatarDinheiro(produto.Valor) }}
+            </mat-list-item>
+        </mat-nav-list>
+        <br />
+        <br />
+        <mat-form-field class="full-width">
+            <input (change)="changeDesconto()" matInput placeholder="Desconto" formControlName="desconto">
+            <mat-error *ngIf="form.controls.desconto.hasError('pattern')">
+                O desconto informado é <strong>inválido</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input readonly matInput placeholder="Valor Total" formControlName="valorTotal">
+        </mat-form-field>
+		<br />
+		<br />
+		<mat-divider [inset]="true"></mat-divider>
+		<br />
+		<button mat-raised-button color="primary">Salvar</button>
+		&nbsp;
+		<button (click)="goBack()" type="button" mat-raised-button>Voltar</button>
+	</form>
+
+</mat-card>

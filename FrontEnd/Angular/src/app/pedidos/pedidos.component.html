@@ -1,0 +1,46 @@
+<app-navbar title="Pedidos"></app-navbar>
+
+<div style="margin:32px;">
+
+    <button mat-raised-button color="primary" (click)="novo()">Novo Pedido</button>
+
+    <br />
+
+    <mat-nav-list>
+        <mat-table [dataSource]="pedidos">
+            <ng-container matColumnDef="Id">
+                <mat-header-cell *matHeaderCellDef> Número </mat-header-cell>
+                <mat-cell *matCellDef="let pedido"> {{pedido.Id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Data">
+                <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
+                <mat-cell *matCellDef="let pedido"> {{pedido.Data | date: 'medium' }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Valor">
+                <mat-header-cell *matHeaderCellDef> Valor </mat-header-cell>
+                <mat-cell *matCellDef="let pedido"> {{formatarDinheiro(pedido.Valor)}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Cliente">
+                <mat-header-cell *matHeaderCellDef> Cliente </mat-header-cell>
+                <mat-cell *matCellDef="let pedido"> {{pedido.Cliente.Nome}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Desconto">
+                <mat-header-cell *matHeaderCellDef> Desconto </mat-header-cell>
+                <mat-cell *matCellDef="let pedido"> {{formatarDinheiro(pedido.Desconto)}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="ValorTotal">
+                <mat-header-cell *matHeaderCellDef> Valor Total </mat-header-cell>
+                <mat-cell *matCellDef="let pedido"> {{formatarDinheiro(pedido.ValorTotal)}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+            <mat-row *matRowDef="let pedido; columns: columns;"></mat-row>
+        </mat-table>
+    </mat-nav-list>
+
+</div>

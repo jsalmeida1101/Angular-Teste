@@ -1,8 +1,4 @@
-<mat-toolbar color="primary">
-	<mat-toolbar-row>
-		<span>Novo Contato</span>
-	</mat-toolbar-row>
-</mat-toolbar>
+<app-navbar title="Novo Contato"></app-navbar>
 
 <mat-card style="margin:32px;">
 
@@ -15,11 +11,15 @@
 			</mat-error>
 		</mat-form-field>
 
-		<br />
-		<br />
+        <br />
+        <br />
+        <mat-divider [inset]="true"></mat-divider>
+        <br />
 
 		<button mat-raised-button color="primary">Salvar</button>
 
+        &nbsp;
+        <button (click)="goBack()" type="button" mat-raised-button>Voltar</button>
 	</form>
 
 </mat-card>

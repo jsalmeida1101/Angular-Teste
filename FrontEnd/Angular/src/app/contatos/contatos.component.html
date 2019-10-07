@@ -1,20 +1,37 @@
-<mat-toolbar color="primary">
-	<mat-toolbar-row>
-		<span>Contatos</span>
-	</mat-toolbar-row>
-</mat-toolbar>
+<app-navbar title="Contatos"></app-navbar>
 
-<div style="margin:32px;">
+<div style="margin: 32px;">
 
-	<button mat-raised-button color="primary" (click)="novo()">Novo Contato</button>
+    <button mat-raised-button color="primary" (click)="novo()">Novo Contato</button>
 
-	<br />
+    <mat-nav-list>
+        <mat-table [dataSource]="contatos">
 
-	<mat-nav-list>
-		<mat-list-item *ngFor="let contato of contatos" (click)="mensagens(contato)">
-			<mat-icon>account_circle</mat-icon>
-			{{ contato.Nome }}
-		</mat-list-item>
-	</mat-nav-list>
+            <ng-container matColumnDef="Id">
+                <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+                <mat-cell *matCellDef="let contato"> {{contato.Id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Nome">
+                <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+                <mat-cell *matCellDef="let contato"> {{contato.Nome}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Actions">
+                <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+                <mat-cell *matCellDef="let contato">
+                    <button type="button"
+                            matTooltip="Ver Mensagens"
+                            (click)="mensagens(contato)"
+                            mat-icon-button>
+                        <mat-icon>message</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+            <mat-row *matRowDef="let contato; columns: columns;"></mat-row>
+        </mat-table>
+    </mat-nav-list>
 
 </div>

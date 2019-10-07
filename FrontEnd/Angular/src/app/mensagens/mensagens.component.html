@@ -1,21 +1,20 @@
-<mat-toolbar color="primary">
-	<mat-toolbar-row>
-		<span>Mensagens de {{contato.Nome}}</span>
-	</mat-toolbar-row>
-</mat-toolbar>
+<app-navbar title="Mensagens de {{contato.Nome}}"></app-navbar>
 
 <div style="margin:32px;">
 
-	<button mat-raised-button color="primary" (click)="contatos()">Contatos</button>
+	<button mat-raised-button (click)="contatos()">Voltar aos Contatos</button>
 	<button mat-raised-button color="primary" (click)="novaMensagem()" style="margin-left:16px;">Nova Mensagem</button>
 
+	<br />
 	<br />
 
 	<mat-nav-list>
 		<mat-list-item *ngFor="let mensagem of mensagens">
 			<mat-icon>message</mat-icon>
+            &nbsp;
 			{{ mensagem.DataHora | date:'medium'}}
 			<br />
+            &nbsp;
 			{{ mensagem.Descricao }}
 		</mat-list-item>
 	</mat-nav-list>
