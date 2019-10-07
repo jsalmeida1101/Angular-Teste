@@ -41,5 +41,8 @@ Thumbs.db
 /.vs
 /.localHistory
 
-/BackEnd/.vs
-/BackEnd/.localHistory
+BackEnd/.vs/
+BackEnd/.localHistory/
+BackEnd/AspNetWebApi/.vs
+BackEnd/AspNetWebApi/AspNetWebApi/obj/
+BackEnd/AspNetWebApi/AspNetWebApi/bin/
