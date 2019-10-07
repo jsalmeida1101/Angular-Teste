@@ -24,7 +24,7 @@ import { CadastroMensagemComponent } from './cadastro-mensagem/cadastro-mensagem
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { ClientesComponent } from './clientes/clientes.component';
 
-// home
+// produtos
 import { ProdutosComponent } from './produtos/produtos.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 
@@ -32,10 +32,8 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
 import { CadastroPedidoComponent } from './cadastro-pedido/cadastro-pedido.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 
-// produtos
+// home
 import { HomeComponent } from './home/home.component';
-import {ApiService} from './api.service';
-import {HttpModule} from '@angular/http';
 
 const appRoutes: Routes = [
 	// contatos
@@ -47,21 +45,21 @@ const appRoutes: Routes = [
 	{ path: 'contatos/:id/mensagens/cadastro', component: CadastroMensagemComponent },
 
 	// produtos
-	{ path: 'produtos', component: HomeComponent },
+	{ path: 'home', component: HomeComponent },
 
 	// clientes
 	{ path: 'clientes', component: ClientesComponent },
 	{ path: 'clientes/cadastro', component: CadastroClienteComponent },
 
-	// home
+	// produtos
 	{ path: 'produtos', component: ProdutosComponent },
-	{ path: 'home/cadastro', component: CadastroProdutoComponent },
+	{ path: 'produtos/cadastro', component: CadastroProdutoComponent },
 
 	// pedidos
 	{ path: 'pedidos', component: PedidosComponent },
 	{ path: 'pedidos/cadastro', component: CadastroPedidoComponent },
 
-	{ path: '', redirectTo: '/produtos', pathMatch: 'full' }
+	{ path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -87,9 +85,7 @@ const appRoutes: Routes = [
 		BrowserAnimationsModule,
 		MaterialImports,
 		FormsModule,
-		ReactiveFormsModule,
-		ApiService,
-		NavbarComponent
+		ReactiveFormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],

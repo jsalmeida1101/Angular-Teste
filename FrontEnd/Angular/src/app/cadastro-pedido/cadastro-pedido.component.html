@@ -5,10 +5,12 @@
 	<form [formGroup]="form" (ngSubmit)="onSubmit()">
 		<mat-form-field class="full-width">
             <mat-select
+                    (selectionChange)="changeCliente($event.value)"
                     placeholder="Cliente"
-                    formControlName="clienteId" name="clienteId">
+                    name="clienteId">
                 <mat-option>Selecione</mat-option>
-                <mat-option *ngFor="let cliente of clientes" [value]="cliente.Id">
+                <mat-option
+                        *ngFor="let cliente of clientes" [value]="cliente.Id">
                     {{cliente.Nome}}
                 </mat-option>
             </mat-select>
